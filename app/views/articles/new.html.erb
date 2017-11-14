@@ -1,4 +1,12 @@
 <h1>Create an article</h1>
+
+<% if @article.errors.any? %>
+<ul>
+<% @article.errors.full_messages.each do |msg|%>
+<li><%= msg %></li>
+<% end %>
+</ul>
+<% end %>
 <!Now we add a form,its a model back form and rails provides a form for helpers, find it in rails forms for helpers online>
 <%= form_for @article do |f| %>
 <p>
