@@ -1,2 +1,64 @@
+$navbar-default-bg: green;
+
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+#logo{
+  float: left;
+  font-size : 1cm;
+  color : #FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+#logo:hover {
+color:#FFFFFF;
+text-decoration:none;
+}
+
+#yoga{
+  color:#FFFFFF;
+}
+
+.centre{
+  text-align: center;
+}
+.jumbotron{
+  background-image:asset-url('save-forests.jpg') ;
+  background-size : cover;
+  height:680px;
+}
+.jumbotron h1{
+  color:#FFFFFF;
+  text-align:center;
+  margin-bottom:30px;
+  letter-spacing:-1px;
+  font-weight:bold;
+}
+.btn-xlarge{
+  font-size:1.7em;
+  background-color:black;
+  
+}
+
+.footer{
+  margin-top:45px;
+  padding-top:5px;
+  border-top:2px solid #eaeaea;
+  color:#777;
+}
+footer a:hover{
+  color:#222;
+}
+footer large{
+  float:left;
+}
+footer ul{
+  float:right;
+  list-style:none;
+  }
+  footer ul li{
+    float:left;
+    margin-left:15px;
+  }
