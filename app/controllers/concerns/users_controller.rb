@@ -25,7 +25,9 @@ if @user.update(user_params)
   render 'edit'
 end
   end
-  
+def show
+  @user = User.find(params[:id])
+end
   private 
   def user_params
     params.require(:user).permit(:username, :email,:password)
