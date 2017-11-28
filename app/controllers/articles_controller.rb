@@ -15,6 +15,7 @@ end
 def create
   #render plain: params[:article].inspect
   @article=Article.new(article_params)
+  @article.user= User.first
   if @article.save
     flash[:success] = "Article was created successfully"
   redirect_to article_path(@article)
