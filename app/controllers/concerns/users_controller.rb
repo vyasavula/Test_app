@@ -22,7 +22,7 @@ class UsersController < ApplicationController
   def edit
     
     
-end
+  end
   def update  
    
 if @user.update(user_params)
@@ -49,5 +49,5 @@ end
     flash[:danger] = "You can only edit your own account"
     redirect_to root_path
   end
-  
+  end
 end
