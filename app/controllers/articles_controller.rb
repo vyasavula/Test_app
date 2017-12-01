@@ -30,12 +30,12 @@ end
 end
 
 def update
-if @article.update(article_params)
+   if @article.update(article_params)
   flash[:success] = "Article was successfully edited/updated"
   redirect_to article_path(@article)
-else 
+   else 
   render 'edit'
-end
+   end
 end
 
 def show
@@ -52,16 +52,20 @@ redirect_to articles_path
 end
 
 private
+
+def set_article
+  @article=Article.find(params[:id])
+end
+
 def article_params
 params.require(:article).permit(:title, :description)
 end
 
 def require_same_user
-  if current_user != @article.user
+  if current_user != @article.user and !current_user.admin?
     flash[:danger] = "You can only edit or delete your own articles"
     redirect_to root_path
   end
-def set_article
-  @article=Article.find(params[:id])
+  
 end
-end
+
