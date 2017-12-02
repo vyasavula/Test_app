@@ -27,7 +27,7 @@ else
   render 'new'
   end
 end
-end
+
 
 def update
    if @article.update(article_params)
@@ -67,5 +67,6 @@ def require_same_user
     redirect_to root_path
   end
   
+end
 end
 
