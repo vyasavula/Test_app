@@ -16,16 +16,15 @@ def edit
 end
 
 def create
-  #render plain: params[:article].inspect
-  @article=Article.new(article_params)
-  @article.user= current_user
   
-  if @article.save
+  @article = Article.new(article_params)
+  @article.user= current_user
+   if @article.save
     flash[:success] = "Article was created successfully"
   redirect_to article_path(@article)
 else
   render 'new'
-  end
+   end
 end
 
 
@@ -58,7 +57,7 @@ def set_article
 end
 
 def article_params
-params.require(:article).permit(:title, :description)
+params.require(:article).permit(:title, :description, category_ids: [])
 end
 
 def require_same_user

@@ -14,7 +14,7 @@
 ActiveRecord::Schema.define(version: 20171202171503) do
 
   create_table "article_categories", force: :cascade do |t|
-    t.integer "aeticle_id"
+    t.integer "article_id"
     t.integer "category_id"
   end
 
